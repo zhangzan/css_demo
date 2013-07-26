@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		input[type="text"]{
+			width: 150px;
+			border-radius: 10px;
+			border: 1px solid #ccc;
+			outline: none;
+			text-indent: 30px;
+			-webkit-transition: 0.3s;
+			position: relative;
+		}
+		input[type="text"]:focus{
+			width: 200px;
+			background: #f1f1f1;
+		}
+		input[type="text"]~s{
+			position: absolute;
+			top: 15px;
+			left: 15px;
+			width: 5px;
+			height: 5px;
+			border: 2px #ccc solid;
+			border-radius:50%;
+		}
+		input[type="text"]~s:before{
+			content: "";
+			position: absolute;
+			width: 3px;
+			height: 6px;
+			background: #ccc;
+			top: 3px;
+			left: 5px;
+			-webkit-transform: rotate(-45deg);
+		}
+	</style>
+</head>
+<body>
+	<input type="text" placeholder="search..."><s></s>
+	<a href="##" onclick="javascript:popIp('http://www.baidu.com/')">demo</a>
+	<script type="text/javascript">
+		function popUp (winURL) {
+			window.open(winURL,"popup","width=320,height=480")
+		}
+	</script>
+</body>
+</html>

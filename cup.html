@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>cup</title>
+	<style>
+		.cup{
+			background: #ccc;
+			width: 100px;
+			height: 80px;
+			border-radius: 0 0 40px 40px;
+			position: relative;
+			left: 100px;
+			top: 100px;
+		}
+		.cup:before{
+			content:"";
+			display: block;
+			width: 35px;
+			height: 40px;
+			position: absolute;
+			left: -35px;
+			top: 10px;
+			border-radius: 10px 0 0 50px;
+			border: 3px solid #ccc;
+		}
+		.cup:after{
+			content:"";
+			display: block;
+			width: 120px;
+			height: 10px;
+			position: absolute;
+			left: -10px;
+			bottom:0px;
+			border-radius: 0 0 30px 30px;
+			background: #bbb;
+
+		}
+		.cup i{
+			color: #ccc;
+			position: absolute;
+			top: -50px;
+			left: 40px;
+			font-style: normal;
+			font-size: 40px;
+			font-family: Candara ;
+			-webkit-animation:cup_a 500ms infinite linear;
+
+		}
+		@-webkit-keyframes cup_a{
+			0%{}
+			1%{-webkit-transform:scaleX(-1);}
+			2%{-webkit-transform:scaleX(1);}
+			100%{-webkit-transform:scaleX(1);}
+		}
+	</style>
+</head>
+<body>
+	<div class="cup"><i>s</i></div>
+</body>
+</html>
